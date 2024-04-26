@@ -1,0 +1,31 @@
+﻿@using MVCStore2.Models
+@using MVCStore2.ViewModels
+
+@{
+    ViewBag.Title = "Details";
+    bool show = false;
+}
+
+
+
+@model ArtistAlbumViewModel
+
+<h2>Showing Details for : @Model.Artist.Name</h2>
+
+<div>
+    <ul>
+        @foreach (Album album in Model.Albums)
+        {
+            <li>@album.Name</li>
+        }
+
+    </ul>
+
+    @if (show)
+    {
+        <span>This should not be shown</span>
+
+    }
+
+
+</div>

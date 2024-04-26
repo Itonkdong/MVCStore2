@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Helpers";
+    var items = new string[] { "pon", "votrnik", "sreda", "cet", "petok" };
+}
+
+<h2>Helpers</h2>
+
+@using (@Html.BeginForm("HelpersV", "Store", FormMethod.Get))
+{
+    <p>
+        TextArea<br />
+        @Html.TextArea("text", "hellow word", new { @class = "form-control" })
+    </p>
+
+    <p>
+        TextBox<br />
+        @Html.TextBox("myTextBox", "This is a value", new { @class = "form-control" })
+    </p>
+
+    <p>
+        Label<br />
+        @Html.Label("StudentName", "Student-Name")
+    </p>
+
+    <p>
+        DropDownList<br />
+        @Html.DropDownList("Den", new SelectList(items), "Izberi den", new { @class = "form-control" })
+    </p>
+
+    <p>
+        Hidden<br />
+        @Html.Hidden("StudentId", "123455")
+    </p>
+    <p>
+        Password<br />
+        @Html.Password("OnlinePassword")
+    </p>
+    <p>
+        RadioButton<br />
+        @Html.RadioButton("pol", "maski") Maski <br />
+        @Html.RadioButton("pol", "zenski") Zenski <br />
+    </p>
+
+    <p>
+        Checkbox<br />
+        @Html.CheckBox("eNeraboten", true) Dali e neraboten Den<br />
+    </p>
+    <p>
+        ActionLink<br />
+        @Html.ActionLink("Doma", "Index", "Home")
+    </p>
+    <button>Submit</button>
+
+
+}
+

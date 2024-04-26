@@ -1,0 +1,18 @@
+﻿
+@using MVCStore2.Models
+
+@{
+    ViewBag.Title = "Search";
+}
+
+@model List<MVCStore2.Models.Album>
+
+<h2>Search results</h2>
+
+<ul>
+    @foreach (Album album in Model)
+    {
+        <li>@album.Name</li>
+    }
+</ul>
+
